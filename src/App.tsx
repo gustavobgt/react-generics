@@ -1,9 +1,12 @@
 import "./App.css";
 import { List } from "./components/generics/List";
+import { Private } from "./components/auth/Private";
+import { Profile } from "./components/auth/Profile";
 
 function App() {
   return (
     <div className="App">
+      <Private isLoggedIn component={Profile} />
       <List
         items={["Batman", "Superman", "Wonder Woman"]}
         onClick={(item) => console.log(item)}
